@@ -33,8 +33,6 @@ async (req: Request, res: Response) => {
   const user = User.build({ email, password })
   await user.save();
 
-
-  // Return the user
   res.status(201).send(user);
 });
 
